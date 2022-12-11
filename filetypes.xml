@@ -1,7 +1,9 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
+      <mapping pattern=".name" type="PLAIN_TEXT" />
       <mapping pattern="afs_graph_mark_adapter_log.sql" type="PLAIN_TEXT" />
+      <mapping pattern="mvnw" type="Shell Script" />
     </extensionMap>
   </component>
 </application>
