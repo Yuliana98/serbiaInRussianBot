@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
  * Controller. Processes client requests and returns a result. Describes the entry point.
  */
 @RestController
-@RequestMapping("/ad")
+@RequestMapping("/serbiaInRussianCatalog")
 public class CatalogController {
 
     @Autowired
