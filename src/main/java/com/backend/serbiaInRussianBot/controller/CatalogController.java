@@ -27,8 +27,8 @@ public class CatalogController {
      * @param adTitle
      * @param city
      * @param type
-     * @param service
-     * @param product
+//     * @param service
+//     * @param product
      * @param price
      * @param description
      * @param phone
@@ -38,13 +38,13 @@ public class CatalogController {
     public String insertAd(@RequestParam(value = "adTitle", required = false) String adTitle,
                            @RequestParam(value = "city", required = false) String city,
                            @RequestParam(value = "type", required = false) String type,
-                           @RequestParam(value = "service", required = false) String service,
-                           @RequestParam(value = "product", required = false) String product,
+//                           @RequestParam(value = "service", required = false) String service,
+//                           @RequestParam(value = "product", required = false) String product,
                            @RequestParam(value = "price", required = false) BigDecimal price,
                            @RequestParam(value = "description", required = false) String description,
                            @RequestParam(value = "phone", required = false) BigDecimal phone) {
 
-        catalogService.insertAd(adTitle, city, type, service, product, price, description, phone);
+        catalogService.insertAd(adTitle, city, type, price, description, phone);
         /**
          * todo: возвращать помимо строки еще и объект
          */
@@ -106,7 +106,7 @@ public class CatalogController {
                         return ad.getType().equals(type);
                     }
                 })
-                .filter(ad -> {
+                /*.filter(ad -> {
                     if (service == null) {
                         return true;
                     } else {
@@ -119,7 +119,7 @@ public class CatalogController {
                     } else {
                         return ad.getProduct().equals(product);
                     }
-                })
+                })*/
 //                .sorted(customCatalogComparator) //todo: sortBy
                 .collect(Collectors.toList());   //collect all matching ads in a collection
         //todo: вернуть первые 10, затем следующие 10 итд.
@@ -165,12 +165,12 @@ public class CatalogController {
         if (type != null) {
             adChange.setType(type);
         }
-        if (service != null) {
+        /*if (service != null) {
             adChange.setService(service);
         }
         if (product != null) {
             adChange.setProduct(product);
-        }
+        }*/
         if (price != null) {
             adChange.setPrice(price);
         }

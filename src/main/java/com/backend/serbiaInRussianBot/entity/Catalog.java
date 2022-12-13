@@ -27,11 +27,11 @@ public class Catalog {
     @Column(name = "TYPE")
     private String type; //(service/product)
 
-    @Column(name = "SERVICE")
+    /*@Column(name = "SERVICE")
     private String service;
 
     @Column(name = "PRODUCT")
-    private String product;
+    private String product;*/
 
     @Column(name = "PRICE")
     private BigDecimal price; //rsd

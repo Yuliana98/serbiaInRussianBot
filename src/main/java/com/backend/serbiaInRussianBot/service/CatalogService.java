@@ -51,15 +51,15 @@ public class CatalogService {
     }
 
     //todo:
-    public void insertAd(String adTitle, String city, String type, String service, String product, BigDecimal price, String description, BigDecimal phone) {
+    public void insertAd(String adTitle, String city, String type, BigDecimal price, String description, BigDecimal phone) {
 
         //создание объекта и занесение результата в переменную ad
         Catalog ad = Catalog.builder()
                 .title(adTitle)
                 .city(city)
                 .type(type)
-                .service(service)
-                .product(product)
+//                .service(service)
+//                .product(product)
                 .price(price)
                 .description(description)
                 .phone(phone)
