@@ -38,7 +38,7 @@ public class CatalogController {
     public String insertAd(@RequestParam(value = "adTitle", required = false) String adTitle,
                            @RequestParam(value = "city", required = false) String city,
                            @RequestParam(value = "type", required = false) String type,
-                           @RequestParam(value = "com/backend/serbiaInRussianBot/service", required = false) String service,
+                           @RequestParam(value = "service", required = false) String service,
                            @RequestParam(value = "product", required = false) String product,
                            @RequestParam(value = "price", required = false) BigDecimal price,
                            @RequestParam(value = "description", required = false) String description,
@@ -72,7 +72,7 @@ public class CatalogController {
     public List<Catalog> CatalogByParams(@RequestParam(value = "adTitle", required = false) String adTitle,
                                          @RequestParam(value = "city", required = false) String city,
                                          @RequestParam(value = "type", required = false) String type,
-                                         @RequestParam(value = "com/backend/serbiaInRussianBot/service", required = false) String service, //??
+                                         @RequestParam(value = "service", required = false) String service, //??
                                          @RequestParam(value = "product", required = false) String product) //??
 //                                       @RequestParam(value = "sortBy", required = false) SortTypeEnum sort)
     {
@@ -147,7 +147,7 @@ public class CatalogController {
                             @RequestParam(value = "adTitle", required = false) String adTitle,
                             @RequestParam(value = "city", required = false) String city,
                             @RequestParam(value = "type", required = false) String type,
-                            @RequestParam(value = "com/backend/serbiaInRussianBot/service", required = false) String service,
+                            @RequestParam(value = "service", required = false) String service,
                             @RequestParam(value = "product", required = false) String product,
                             @RequestParam(value = "price", required = false) BigDecimal price,
                             @RequestParam(value = "description", required = false) String description,
